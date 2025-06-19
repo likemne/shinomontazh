@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHAMAN шиномонтаж с выездом по Новосибирску</title>
+    <title>TIME MASTER 54 - Помощь на дороге в Новосибирске</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
     <style>
@@ -55,18 +55,18 @@
         }
         
         .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 28px;
-            font-weight: 800;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
             color: var(--gold);
             text-decoration: none;
             display: flex;
             align-items: center;
         }
         
-        .logo i {
+        .logo-img {
+            height: 50px;
             margin-right: 10px;
-            font-size: 32px;
         }
         
         .contact-header {
@@ -121,6 +121,17 @@
             background: #128C7E;
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+        }
+        
+        .btn-vk {
+            background: #4A76A8;
+            color: var(--white);
+        }
+        
+        .btn-vk:hover {
+            background: #3a5f8d;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(74, 118, 168, 0.3);
         }
         
         /* Герой секция */
@@ -245,6 +256,80 @@
             font-size: 24px;
             margin-bottom: 15px;
             color: var(--white);
+        }
+        
+        /* Услуги и цены */
+        .pricing {
+            padding: 100px 0;
+            background-color: var(--black);
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .service-card {
+            background: rgba(26, 26, 26, 0.7);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s;
+            backdrop-filter: blur(5px);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .service-icon {
+            font-size: 40px;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+        
+        .service-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+        
+        .price {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--gold);
+            margin: 15px 0;
+        }
+        
+        .price-note {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 5px;
         }
         
         /* Как мы работаем */
@@ -393,6 +478,11 @@
             flex: 0 0 30%;
         }
         
+        .footer-social {
+            flex: 0 0 100%;
+            margin-top: 30px;
+        }
+        
         .footer-title {
             font-size: 20px;
             color: var(--gold);
@@ -423,6 +513,30 @@
             width: 20px;
         }
         
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .social-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .social-button:hover {
+            background: var(--gold);
+            color: var(--black);
+            transform: translateY(-3px);
+        }
+        
         .copyright {
             text-align: center;
             padding-top: 30px;
@@ -444,6 +558,13 @@
             
             .step:not(:last-child):after {
                 display: none;
+            }
+            
+            .footer-logo,
+            .footer-contact,
+            .footer-hours {
+                flex: 0 0 48%;
+                margin-bottom: 30px;
             }
         }
         
@@ -477,6 +598,10 @@
                 padding: 30px 20px;
             }
             
+            .service-card {
+                padding: 25px 15px;
+            }
+            
             .footer-content > div {
                 flex: 0 0 100%;
                 margin-bottom: 40px;
@@ -501,6 +626,26 @@
             .step {
                 flex: 0 0 100%;
             }
+            
+            .service-icon {
+                font-size: 32px;
+            }
+            
+            .service-card h3 {
+                font-size: 18px;
+            }
+            
+            .price {
+                font-size: 24px;
+            }
+            
+            .logo-img {
+                height: 40px;
+            }
+            
+            .logo {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
@@ -510,8 +655,8 @@
         <div class="container">
             <div class="header-content">
                 <a href="#" class="logo">
-                    <i class="fas fa-tire"></i>
-                    SHAMAN
+                    <img src="https://sun9-33.userapi.com/impg/ealeASRo-RsLtiygWzX2kPtg9EJwfSCALX8LBA/Kd_0gd3tS_M.jpg?size=1080x1071&quality=95&sign=6cfdd6a0bccf2ce3ad52afd28aad6315&type=album" alt="TIME MASTER 54" class="logo-img">
+                    TIME MASTER 54
                 </a>
                 <div class="contact-header">
                     <a href="tel:+79134777003" class="phone">+7 913 477-70-03</a>
@@ -534,7 +679,7 @@
                     </div>
                 </div>
                 <h1>Экстренная помощь <span class="highlight">на дороге</span></h1>
-                <p>Шиномонтаж с выездом по Новосибирску. Работаем круглосуточно, без выходных.</p>
+                <p>Круглосуточная помощь автомобилистам в Новосибирске. Работаем 24/7 без выходных.</p>
                 <div class="buttons-container">
                     <a href="tel:+79134777003" class="btn btn-call btn-lg"><i class="fas fa-phone-alt"></i> Вызвать мастера</a>
                     <a href="https://wa.me/79134777003" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> Написать в WhatsApp</a>
@@ -559,8 +704,8 @@
                     <div class="benefit-icon">
                         <i class="fas fa-crown"></i>
                     </div>
-                    <h3>Премиум сервис</h3>
-                    <p>Используем только профессиональное оборудование и качественные материалы</p>
+                    <h3>Профессиональные мастера</h3>
+                    <p>Опытные специалисты с профессиональным оборудованием решат любую проблему</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">
@@ -570,6 +715,73 @@
                     <p>Работаем круглосуточно, в любое время дня и ночи, включая праздничные дни</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Услуги и цены -->
+    <section class="pricing">
+        <div class="container">
+            <h2 class="section-title">Услуги и цены</h2>
+            <div class="pricing-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-car-battery"></i>
+                    </div>
+                    <h3>Отогрев авто</h3>
+                    <div class="price">от 3 500 ₽</div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-gas-pump"></i>
+                    </div>
+                    <h3>Прикур авто</h3>
+                    <div class="price">от 1 500 ₽</div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-truck-pickup"></i>
+                    </div>
+                    <h3>Эвакуатор круглосуточно</h3>
+                    <div class="price">от 3 500 ₽</div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-gas-pump"></i>
+                    </div>
+                    <h3>Подвоз топлива</h3>
+                    <div class="price">от 1 500 ₽</div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Аварийный комиссар</h3>
+                    <div class="price">от 5 000 ₽</div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Ремонт колеса</h3>
+                    <div class="price">от 2 000 ₽</div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3>Безопасное вскрытие авто</h3>
+                    <div class="price">от 2 500 ₽</div>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 30px; font-style: italic; color: rgba(255,255,255,0.7);">
+                *Точная стоимость зависит от сложности работы и удаленности объекта
+            </p>
         </div>
     </section>
 
@@ -597,7 +809,7 @@
                     <div class="step">
                         <div class="step-number">4</div>
                         <h3>Гарантия качества</h3>
-                        <p>Вы получаете премиальный сервис и гарантию на все работы</p>
+                        <p>Вы получаете профессиональный сервис и гарантию на все работы</p>
                     </div>
                 </div>
             </div>
@@ -609,7 +821,7 @@
         <div class="container">
             <div class="cta-box">
                 <h2>Нужна помощь прямо сейчас?</h2>
-                <p>Не теряйте время! Наши мастера уже готовы выехать к вам и решить проблему с шинами в кратчайшие сроки.</p>
+                <p>Не теряйте время! Наши мастера уже готовы выехать к вам и решить проблему в кратчайшие сроки.</p>
                 <div class="buttons-container">
                     <a href="tel:+79134777003" class="btn btn-call btn-lg"><i class="fas fa-phone-alt"></i> +7 913 477-70-03</a>
                     <a href="https://wa.me/79134777003" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> Написать в WhatsApp</a>
@@ -624,10 +836,10 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <a href="#" class="logo">
-                        <i class="fas fa-tire"></i>
-                        SHAMAN
+                        <img src="https://sun9-33.userapi.com/impg/ealeASRo-RsLtiygWzX2kPtg9EJwfSCALX8LBA/Kd_0gd3tS_M.jpg?size=1080x1071&quality=95&sign=6cfdd6a0bccf2ce3ad52afd28aad6315&type=album" alt="TIME MASTER 54" class="logo-img" style="height: 40px;">
+                        TIME MASTER 54
                     </a>
-                    <p>Качественный шиномонтаж с выездом. Быстро, качественно, круглосуточно.</p>
+                    <p>Круглосуточная помощь автомобилистам в Новосибирске. Быстро, качественно, 24/7.</p>
                 </div>
                 <div class="footer-contact">
                     <h3 class="footer-title">Контакты</h3>
@@ -641,9 +853,17 @@
                     <p><i class="fas fa-calendar-alt"></i> Без выходных</p>
                     <p><i class="fas fa-car"></i> Срочный выезд 24/7</p>
                 </div>
+                <div class="footer-social">
+                    <h3 class="footer-title">Мы в социальных сетях</h3>
+                    <div class="social-links">
+                        <a href="https://vk.com/club224247099" class="social-button" target="_blank">
+                            <i class="fab fa-vk"></i> Наша группа ВКонтакте
+                        </a>
+                    </div>
+                </div>
             </div>
             <div class="copyright">
-                &copy; 2023 SHAMAN. Шиномонтаж с выездом в Новосибирске.
+                &copy; 2023 TIME MASTER 54. Помощь на дороге в Новосибирске.
             </div>
         </div>
     </footer>
