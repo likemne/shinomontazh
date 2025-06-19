@@ -276,12 +276,14 @@
             background: rgba(26, 26, 26, 0.7);
             border: 1px solid rgba(212, 175, 55, 0.3);
             border-radius: 10px;
-            padding: 30px;
+            padding: 0;
             text-align: center;
             transition: all 0.3s;
             backdrop-filter: blur(5px);
             position: relative;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
         
         .service-card:hover {
@@ -307,10 +309,25 @@
             transform: scaleX(1);
         }
         
-        .service-icon {
-            font-size: 40px;
-            color: var(--gold);
-            margin-bottom: 20px;
+        .service-image {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .service-card:hover .service-image img {
+            transform: scale(1.05);
+        }
+        
+        .service-content {
+            padding: 20px;
         }
         
         .service-card h3 {
@@ -599,7 +616,7 @@
             }
             
             .service-card {
-                padding: 25px 15px;
+                padding: 0;
             }
             
             .footer-content > div {
@@ -625,10 +642,6 @@
             
             .step {
                 flex: 0 0 100%;
-            }
-            
-            .service-icon {
-                font-size: 32px;
             }
             
             .service-card h3 {
@@ -724,59 +737,73 @@
             <h2 class="section-title">Услуги и цены</h2>
             <div class="pricing-grid">
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-car-battery"></i>
+                    <div class="service-image">
+                        <img src="https://sun9-68.userapi.com/impg/kGmeOKuT2pyFQDxxnTsTa7BL6ex9-6BZKyz9KA/Qh_VZ4zoa_k.jpg?size=1217x2160&quality=95&sign=e44dd7e7dec6593351336d47c82829b4&type=album" alt="Отогрев авто">
                     </div>
-                    <h3>Отогрев авто</h3>
-                    <div class="price">от 3 500 ₽</div>
+                    <div class="service-content">
+                        <h3>Отогрев авто</h3>
+                        <div class="price">от 3 500 ₽</div>
+                    </div>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-gas-pump"></i>
+                    <div class="service-image">
+                        <img src="https://sun9-45.userapi.com/impg/Ff12vXnzZ8EBB1AKPT4BVyhM7wzmjA4LnHwy-A/aLmOujI0I1A.jpg?size=1080x810&quality=95&sign=d23017842010fd001cc009eaadcfb151&type=album" alt="Прикур авто">
                     </div>
-                    <h3>Прикур авто</h3>
-                    <div class="price">от 1 500 ₽</div>
+                    <div class="service-content">
+                        <h3>Прикур авто</h3>
+                        <div class="price">от 1 500 ₽</div>
+                    </div>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-truck-pickup"></i>
+                    <div class="service-image">
+                        <img src="https://sun9-52.userapi.com/impg/APG2dfTJrsbHAp2jErrsp6orwcvbwcYhj9zdVQ/6DilVxfZRRA.jpg?size=880x420&quality=95&sign=f1501285cc39b5f58b21b450fbc50780&type=album" alt="Эвакуатор">
                     </div>
-                    <h3>Эвакуатор круглосуточно</h3>
-                    <div class="price">от 3 500 ₽</div>
+                    <div class="service-content">
+                        <h3>Эвакуатор круглосуточно</h3>
+                        <div class="price">от 3 500 ₽</div>
+                    </div>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-gas-pump"></i>
+                    <div class="service-image">
+                        <img src="https://sun9-40.userapi.com/impg/q6bxdQ4GVw-tkVVS0b9WAT1km3eYS4OaM8i8Lw/n9irkAlwJi8.jpg?size=1080x597&quality=95&sign=6f6af0868a40aeb731779608cb3cbc68&type=album" alt="Подвоз топлива">
                     </div>
-                    <h3>Подвоз топлива</h3>
-                    <div class="price">от 1 500 ₽</div>
+                    <div class="service-content">
+                        <h3>Подвоз топлива</h3>
+                        <div class="price">от 1 500 ₽</div>
+                    </div>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-user-tie"></i>
+                    <div class="service-image">
+                        <img src="https://sun9-29.userapi.com/impg/4ZWeWJi88GRogg2Yp2EuqUPIY3SC1bjWiwHb9g/U5ND4LGqglY.jpg?size=1200x1600&quality=95&sign=c081730c604c308c938c9589ba3bc7ee&type=album" alt="Аварийный комиссар">
                     </div>
-                    <h3>Аварийный комиссар</h3>
-                    <div class="price">от 5 000 ₽</div>
+                    <div class="service-content">
+                        <h3>Аварийный комиссар</h3>
+                        <div class="price">от 5 000 ₽</div>
+                    </div>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-tools"></i>
+                    <div class="service-image">
+                        <img src="https://sun9-19.userapi.com/impg/6zR0fcarIIkYketdsewDahPyuBdDLRvTEn_99A/ac61HlkvPiw.jpg?size=1080x657&quality=95&sign=ac99874fd0d90b907b72c605ffa5b989&type=album" alt="Ремонт колеса">
                     </div>
-                    <h3>Ремонт колеса</h3>
-                    <div class="price">от 2 000 ₽</div>
+                    <div class="service-content">
+                        <h3>Ремонт колеса</h3>
+                        <div class="price">от 2 000 ₽</div>
+                    </div>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-key"></i>
+                    <div class="service-image">
+                        <img src="https://sun9-8.userapi.com/impg/3KjB9YiHeKSOoDnyQOarQXkgY-udkkCp1ts-rg/oEeiMVguUMg.jpg?size=599x411&quality=95&sign=14888d264d3067565c4ce469828474f2&type=album" alt="Безопасное вскрытие авто">
                     </div>
-                    <h3>Безопасное вскрытие авто</h3>
-                    <div class="price">от 2 500 ₽</div>
+                    <div class="service-content">
+                        <h3>Безопасное вскрытие авто</h3>
+                        <div class="price">от 2 500 ₽</div>
+                    </div>
                 </div>
             </div>
             <p style="text-align: center; margin-top: 30px; font-style: italic; color: rgba(255,255,255,0.7);">
